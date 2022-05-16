@@ -17,7 +17,7 @@ print( catName, "needed somewhere to hide from the cold so it jumped in the back
 print(catName, "went to sleep and when", catName, "woke up it had no idea where it is")
 
 
-leave_Truck =  input("\n Does the cat leave the truck?  Yes or No")
+leave_Truck =  input("\n Does the cat leave the truck?  Yes or No:   ")
 
 if leave_Truck.lower() == ("yes"):
 
@@ -27,11 +27,11 @@ if leave_Truck.lower() == ("yes"):
 
 if leave_Truck.lower() == ("no"):
         print("the sleepy", catBreed, "attempts to look around the back of the truck, but", catName, "suddenly hears something in the distance")
-        print("The truck owner spots", catName, "and screams “get out of my truck!”", catName, "runs out of the truck and far into", forestName, + ".")
+        print("The truck owner spots", catName, "and screams “get out of my truck!”", catName, "runs out of the truck and far into", forestName + ".")
 
 print("\n", catName, "stops in front of a stream.")
 
-cross_Stream = input("\n Should the cat cross the stream?")
+cross_Stream = input("\n Should the cat cross the stream? Yes or No:   ")
 if cross_Stream.lower() == ("yes"):
     print( catName, "attempts to cross the stream using the rocks that are sticking out of it.")
     print(favoriteNumber, "fish start to swim downstream towards", catName + ".")
@@ -42,17 +42,28 @@ if cross_Stream.lower() == ("no"):
     print(catName, "rushes to the rocks sticking out the water to catch the fish but is to late.")
     print(catName, "jumps to the other side of the stream and continues through", forestName + ".")
 
-if leave_Truck & cross_Stream == ("yes"):
+if leave_Truck.lower() == ("yes") and cross_Stream.lower() == ("yes"):
     print("\n After getting sprayed by a skunk and falling into a stream in", forestName, catName, "finally reached", cityName +  ".")
     print(catName, "walks up to a vent blowing hot air to dry off.")
     print(ownerName, "walks past", catName, "and says, I always wanted a", catBreed, "and picks up", catName + ".")
     print(catName, "purrs and returns home with", ownerName + ".")
 
-if leave_Truck & cross_Stream == ("no"):
+if leave_Truck.lower() == ("no") and cross_Stream.lower() == ("no"):
     print("\nAfter escaping", forestName, catName, "finally reached", cityName + "." )
-    print(catName, "runs past a vent blowing hot almost hitting" ownerName, "in the legs.")
-    print(OwnerName, "says “hey, I’m walking here!” And", catName, "runs down an alley and starts eating food out of the trash.")
+    print(catName, "runs past a vent blowing hot almost hitting", ownerName, "in the legs.")
+    print(ownerName, "says “hey, I’m walking here!” And", catName, "runs down an alley and starts eating food out of the trash.")
 
+if leave_Truck.lower() == ("yes") and cross_Stream.lower() == ("no"):
+    print("\nAfter getting sprayed by a skunk", catName, "finally reached", cityName + ".")
+    print(catName, "walks up to a vent blowing hot air to dry off.")
+    print(ownerName, "walks past", catName, "and says “That cat stinks”.")
+    print(catName, "runs down an alley and starts eating food out of the trash.")
+
+if leave_Truck.lower() == ("no") and cross_Stream.lower() == ("yes"):
+    print("\nAfter falling into a stream in", forestName, catName, "finally reached", cityName + ".")
+    print(catName, "walks up to a vent blowing hot air to dry off.")
+    print(ownerName, "walks past", catName, "and says 'I always wanted a", catBreed, "'" , "and picks up", catName)
+    print(catName, "purrs and returns home with", ownerName + ".")
 
 
 
